@@ -458,7 +458,7 @@ contract Ownable is Context {
     }
 }
 
-contract yAPEToken is Context, IBEP20, Ownable {
+contract CombatFinanceToken is Context, IBEP20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -471,17 +471,17 @@ contract yAPEToken is Context, IBEP20, Ownable {
     
     uint8 private constant _decimals = 8;
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 88000000 * 10 ** uint256(_decimals);
+    uint256 private _tTotal = 75000000 * 10 ** uint256(_decimals);
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
     uint256 private _tBurnTotal;
 
-    string private constant _name = 'GorillaYield.finance';
-    string private constant _symbol = 'yAPE';
+    string private constant _name = 'combat.finance';
+    string private constant _symbol = 'CMBT';
     
     uint256 private _taxFee = 600;
     uint256 private _burnFee = 200;
-    uint private _max_tx_size = 88000000 * 10 ** uint256(_decimals);
+    uint private _max_tx_size = 75000000 * 10 ** uint256(_decimals);
 
     constructor () public {
         _rOwned[_msgSender()] = _rTotal;
